@@ -6,14 +6,24 @@ package com.example.cub01.samplechatapp.model;
 
 public class FriendStatus {
     public int id;
-    public String name;
+
     public String status;
 
-    public FriendStatus(String status){
-        this.status=status;
+    public FriendStatus(int id, String status) {
+        this.status = status;
+        this.id = id;
     }
 
-    public String getStatus(){
+    public int getId() {
+        return id;
+    }
+
+    public String getStatus() {
         return status;
+    }
+
+    @Override
+    public String toString() {
+        return getStatus() + " " + getId();
     }
 }
